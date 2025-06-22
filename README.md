@@ -1,7 +1,7 @@
 Airbnb Clone Project
 Project Overview
 This project aims to build an Airbnb-like platform allowing users to list, discover, and book properties worldwide. The primary goals are:
-Implement a robust user management system (authentication, profiles, roles).
+Implement a robust user management system.
 
 
 Develop property management (listings, images, amenities).
