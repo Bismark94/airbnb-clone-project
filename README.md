@@ -1,89 +1,86 @@
 Airbnb Clone Project
+
 Project Overview
-This project aims to build an Airbnb-like platform allowing users to list, discover, and book properties worldwide. The primary goals are:
-Implement a robust user management system.
+
+This project aims to build an Airbnb-like platform allowing users to list, discover, and book properties worldwide. 
 
 
-Develop property management (listings, images, amenities).
+A. The primary goals are:
 
 
-Create a booking system with availability checks and payment processing.
+    i. Implement a robust user management system.
 
 
-Integrate reviews and ratings for hosts and guests.
+    ii. Develop property management (listings, images, amenities).
 
 
-Ensure scalability, security, and maintainability using modern web technologies.
+    iii. Create a booking system with availability checks and payment processing.
 
 
-Tech Stack: Django, GraphQL, PostgreSQL, Docker, GitHub Actions, Redis, React
-
-Team Roles
-Project Manager: Oversees project scope, timelines, and coordination among teams. Acts as primary liaison with stakeholders.
+    iv. Integrate reviews and ratings for hosts and guests.
 
 
-Backend Developer: Implements API endpoints, business logic, and integrates third-party services using Django and GraphQL.
+    v. Ensure scalability, security, and maintainability using modern web technologies.
 
 
-Frontend Developer: Builds user interfaces with React, ensuring responsiveness and accessibility.
+B. Tech Stack: Django, GraphQL, PostgreSQL, Docker, GitHub Actions, Redis, React
 
 
-Database Administrator (DBA): Designs schemas, optimizes queries, and manages PostgreSQL to ensure data integrity and performance.
+C. Team Roles
+
+    i. Project Manager: Oversees project scope, timelines, and coordination among teams. Acts as primary liaison with stakeholders.
 
 
-DevOps Engineer: Configures CI/CD pipelines with GitHub Actions, manages Docker containers, and monitors deployments.
+    ii. Backend Developer: Implements API endpoints, business logic, and integrates third-party services using Django and GraphQL.
 
 
-QA Engineer: Writes and executes test plans, automates regression tests, and ensures application quality before releases.
+    iii. Frontend Developer: Builds user interfaces with React, ensuring responsiveness and accessibility.
 
 
-Technology Stack
-Technology
-Purpose
-Django
-Web framework for building RESTful and GraphQL APIs
-GraphQL
-Flexible query language for client-server data interactions
-PostgreSQL
-Relational database for storing users, listings, bookings, etc.
-React
-Frontend library for building interactive user interfaces
-Docker
-Containerization for consistent development and production setup
-GitHub Actions
-CI/CD automation for testing, linting, and deployments
-Redis
-In-memory store for caching sessions and background tasks
+    iv. Database Administrator (DBA): Designs schemas, optimizes queries, and manages PostgreSQL to ensure data integrity and performance.
 
 
-Database Design
-Entities and Key Fields
-User: id, username, email, password_hash, role
+    v. DevOps Engineer: Configures CI/CD pipelines with GitHub Actions, manages Docker containers, and monitors deployments.
 
 
-Property: id, host_id (FK), title, description, location, price_per_night
+    vi. QA Engineer: Writes and executes test plans, automates regression tests, and ensures application quality before releases.
 
 
-Booking: id, user_id (FK), property_id (FK), start_date, end_date, status
+D. Technology Stack
+
+    i. Django - Web framework for building RESTful and GraphQL APIs
+    ii. GraphQL- Flexible query language for client-server data interactions
+    iii. PostgreSQL - Relational database for storing users, listings, bookings, etc.
+    iv. React - Frontend library for building interactive user interfaces
+    v. Docker -Containerization for consistent development and production setup
+    vi. GitHub Actions - CI/CD automation for testing, linting, and deployments
+    v. Redis - In-memory store for caching sessions and background tasks
 
 
-Review: id, booking_id (FK), rating, comment, created_at
+E. Database Design
 
+    i. User: id, username, email, password_hash, role
 
-Payment: id, booking_id (FK), amount, payment_method, status, timestamp
+    ii. Property: id, host_id (FK), title, description, location, price_per_night
+
+    iii. Booking: id, user_id (FK), property_id (FK), start_date, end_date, status
+
+    iv. Review: id, booking_id (FK), rating, comment, created_at
+
+    v. Payment: id, booking_id (FK), amount, payment_method, status, timestamp
 
 
 Relationships
-A User can have multiple Properties (host relationship).
+    i. A User can have multiple Properties (host relationship).
 
 
-A Booking belongs to one User (guest) and one Property.
+    ii. A Booking belongs to one User (guest) and one Property.
 
 
-A Review is tied to a Booking and indirectly to both guest and host.
+    iii. A Review is tied to a Booking and indirectly to both guest and host.
 
 
-A Payment record corresponds to a Booking.
+    iv. A Payment record corresponds to a Booking.
 
 
 Feature Breakdown
